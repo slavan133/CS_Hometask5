@@ -13,7 +13,7 @@ double [] GenArray (int Length)
     double [] array = new double [Length];
     for (int i=0; i<Length; i++)
     {
-        array[i] = Math.Round(new Random().NextDouble(), 1);
+        array[i] = Math.Round(new Random().NextDouble(), 2);
     }
     return array;
 }
