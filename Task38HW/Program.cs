@@ -4,7 +4,8 @@
 int length = GetLength();
 double [] array = GenArray(length);
 double difmaxmin = DifMaxMin(array);
-// Console.WriteLine($"Массив: {array}");
+Console.Write("Массив:");
+PrintArray(array);
 Console.WriteLine($"Разница между максимальным и минимальным: {difmaxmin}");
 
 double [] GenArray (int Length) 
@@ -12,7 +13,7 @@ double [] GenArray (int Length)
     double [] array = new double [Length];
     for (int i=0; i<Length; i++)
     {
-        array[i] = Math.Round(new Random().NextDouble(), 2);
+        array[i] = Math.Round(new Random().NextDouble(), 1);
     }
     return array;
 }
@@ -30,4 +31,15 @@ double DifMaxMin(double [] array)
    double max = array.Max();
    double dif = max - min;
    return dif;
+}
+
+void PrintArray(double[] array)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < array.Length; i++)
+        {
+            Console.Write(array[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
 }
